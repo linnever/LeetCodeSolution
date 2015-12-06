@@ -29,7 +29,8 @@ another array: [1, 1, 0, 1, 0, 2]
 (array value 2 means the number of papers which's citation greater than the total papers )
 ```
 
-//Chinese
+Chinese:
+
 另一个数组记录的是文章引用次数相同的文章数量，大于文章总数的单独记录。
 然后从后往前遍历数组，把数组值相加如果大于等于当前的数组下标值，意味着有n篇文章的引用数大于n,即得到h-index的值。
 
