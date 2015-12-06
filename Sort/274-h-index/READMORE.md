@@ -8,7 +8,7 @@ f(A)=10, f(B)=8, f(C)=5, f(D)=4, f(E)=3　→ h-index=4
 f(A)=25, f(B)=8, f(C)=5, f(D)=3, f(E)=3　→ h-index=3
 ```
 As we know, H-Index is a measure of productivity and citation impact of a researcher. It is also called Hirsch index or Hirsch number after the name of the physicist Jorge Hirsch.
-[h-index](https://github.com/linnever/LeetCodeSolution/blob/master/H-index-en.png)
+[h-index](https://upload.wikimedia.org/wikipedia/commons/d/da/H-index-en.svg)
 
 so there is first solution in Solution.java .By sorting, it takes O(nlogn)  time complexity.
 
