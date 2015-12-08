@@ -1,27 +1,34 @@
 public class Solution {
-public  String largestNumber(int[] num) {
-    if(num==null || num.length==0)
-        return "";
-    String[] Snum = new String[num.length];
-    for(int i=0;i<num.length;i++)
-        Snum[i] = num[i]+"";
+  public String largestNumber(int[] num) {
+          StringBuilder res = new StringBuilder();
+          if (num == null || num.length == 0)
+              return null;
 
-    Comparator<String> comp = new Comparator<String>(){
-        @Override
-        public int compare(String str1, String str2){
-            String s1 = str1+str2;
-            String s2 = str2+str1;
-            return s1.compareTo(s2);
-        }
-    };
-    Arrays.sort(Snum,comp);
-    if(Snum[Snum.length-1].charAt(0)=='0')
-        return "0";
-    StringBuilder sb = new StringBuilder();
+          //conver Integer to string
+          String[] nums = new String[num.length];
+          for (int i = 0; i < num.length; i++)
+              nums[i] = Integer.toString(num[i]);
 
-    for(String s: Snum)
-        sb.insert(0, s);
+          //Define comparator
+          Comparator<String> comp = new Comparator<String>()
+                  {
+                      @Override
+                      public int compare(String o1, String o2)
+                      {
+                          return (o1+o2).compareTo(o2+o1);
+                      }
+                  };
+           Arrays.sort(nums, comp);
 
-    return sb.toString();
-}
+           //The new number should not start with 0 unless it is 0
+          if (nums[nums.length-1].equals("0"))
+              return "0";
+  
+          for (int i = nums.length-1; i >= 0; i--)
+           {
+               res.append(nums[i]);
+           }
+
+          return res.toString();
+      }
 }
