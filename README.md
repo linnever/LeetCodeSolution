@@ -12,5 +12,5 @@ how can you find a problem:
 
 In READMORE.md ,you can see my analysis and easter egg.
 
-## more
+## More
 Welcome to find a bug or something else.Pull request!Pull request!
